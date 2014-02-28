@@ -1,0 +1,1 @@
+json.extract! @post, :id, :title, :company, :location, :jobdescription, :experience, :designation, :role, :rolecategory, :educationqualification, :jobspecification, :candidatedetails, :contactdetails, :created_at, :updated_at

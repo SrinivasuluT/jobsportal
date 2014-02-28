@@ -1,0 +1,65 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :jobdescription %><br>
+    <%= f.text_field :jobdescription %>
+  </div>
+  <div class="field">
+    <%= f.label :experience %><br>
+    <%= f.text_field :experience %>
+  </div>
+  <div class="field">
+    <%= f.label :designation %><br>
+    <%= f.text_field :designation %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.text_field :role %>
+  </div>
+  <div class="field">
+    <%= f.label :rolecategory %><br>
+    <%= f.text_field :rolecategory %>
+  </div>
+  <div class="field">
+    <%= f.label :educationqualification %><br>
+    <%= f.text_field :educationqualification %>
+  </div>
+  <div class="field">
+    <%= f.label :jobspecification %><br>
+    <%= f.text_field :jobspecification %>
+  </div>
+  <div class="field">
+    <%= f.label :candidatedetails %><br>
+    <%= f.text_field :candidatedetails %>
+  </div>
+  <div class="field">
+    <%= f.label :contactdetails %><br>
+    <%= f.text_field :contactdetails %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
